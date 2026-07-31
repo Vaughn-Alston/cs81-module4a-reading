@@ -1,3 +1,15 @@
+https://github.com/Vaughn-Alston/cs81-module4a-reading
+
+//above is a link to the repository but below 
+
+//Vaughn Alston
+//July 30th 2026
+
+
+
+
+
+
 // Weekly reading log whihc is an array of objects holding a Day and a Book
 const readingLog = [
   { day: "Monday", book: "Dune", minutes: 30 },
