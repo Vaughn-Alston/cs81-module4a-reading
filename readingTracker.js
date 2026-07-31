@@ -22,14 +22,31 @@ function addReadBook(day, book, minutes) {
 
 // Returns total minutes spent reading all week
 //This will return a int
-function totalReadingMinutes(log) {
+const totalReadingMinutes = (log)  => {
+
   let total = 0;
-  for (let entry of log) {
+  //My updated changes loop down the array adding the length helps show
+  //future developers that this is an array im looping down alot easier
+  for (let arrayIndex = 0; arrayIndex < log.length; arrayIndex++) {
     //loop through the array log and for every entry in log add the total minutes to the toal
-    total += entry.minutes;
+    total += log[arrayIndex].minutes;
+
+    console.log(log.minutes)
   }
   return total;
-}
+};
+
+const add = (a, b) => {
+  const result = a + b;
+  return result; 
+};
+
+
+
+
+
+
+
 
 // Returns the book read most frequently
 function mostReadBook(log) {
@@ -44,6 +61,8 @@ function mostReadBook(log) {
 
     //if the book entry is not ! not in bookCounts[entry.book] 
     if (!bookCounts[entry.book]) {
+
+      
 
       //then add the value to the array and then push a key of 1 to it
       bookCounts[entry.book] = 1;
@@ -91,6 +110,10 @@ function printDailySummary(log) {
 
 // Example usage
 addReadBook("Saturday", "Dune", 50);
+addReadBook("Sunday", "Percy Jackson", 2000);
 printDailySummary(readingLog);
 console.log("Total minutes read:", totalReadingMinutes(readingLog));
 console.log("Most read book:", mostReadBook(readingLog));
+
+
+
